@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sticky Navigation Bar and Table of Books</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Sticky Navigation Bar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            padding: 10px;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            z-index: 100;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        /* Table of Books */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Registration Form */
+        form {
+            width: 300px;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        // Smooth scrolling to section
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="#books" onclick="scrollToSection('books')">Books</a>
+        <a href="#register" onclick="scrollToSection('register')">Register</a>
+    </div>
+
+    <h1>Table of Books</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Book ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Availability</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td style="color:blue;"><u>Book Title 1</u></td>
+                        </tr>
+                        <tr>
+                            <td>Publication Date:2000</td>
+                        </tr>
+                        <tr>
+                            <td>Page Count:250</td>
+                        </tr>
+                        <tr>
+                            <td>ISBN:123-4567890123</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>Author 1</td>
+                <td>Genre 1</td>
+                <td>Available</td>
+            </tr>
+            <!-- Add more rows for additional books -->
+            <tr>
+                <td>2</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td style="color:blue;"><u>Book Title 2</u></td>
+                        </tr>
+                        <tr>
+                            <td>Publication Date:2005</td>
+                        </tr>
+                        <tr>
+                            <td>Page Count:300</td>
+                        </tr>
+                        <tr>
+                            <td>ISBN:123-4567890456</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>Author 2</td>
+                <td>Genre 2</td>
+                <td>Available</td>
+            </tr>
+            <!-- More rows-->
+            <tr>
+                <td>3</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td style="color:blue;"><u>Book Title 3</u></td>
+                        </tr>
+                        <tr>
+                            <td>Publication Date:2010</td>
+                        </tr>
+                        <tr>
+                            <td>Page Count:350</td>
+                        </tr>
+                        <tr>
+                            <td>ISBN:123-4567890789</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>Author 3</td>
+                <td>Genre 3</td>
+                <td>Available</td>
+            </tr>
+            <!-- add 4th row -->
+            <tr>
+                <td>4</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td style="color:blue;"><u>Book Title 4</u></td>
+                        </tr>
+                        <tr>
+                            <td>Publication Date:2015</td>
+                        </tr>
+                        <tr>
+                            <td>Page Count:400</td>
+                        </tr>
+                        <tr>
+                            <td>ISBN:123-4567891123</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>Author 4</td>
+                <td>Genre 4</td>
+                <td>Available</td>
+            </tr>
+            <!-- more rows -->
+            <tr>
+                <td>5</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td style="color:blue;"><u>Book Title 5</u></td>
+                        </tr>
+                        <tr>
+                            <td>Publication Date:2020</td>
+                        </tr>
+                        <tr>
+                            <td>Page Count:450</td>
+                        </tr>
+                        <tr>
+                            <td>ISBN:123-4567891456</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>Author 5</td>
+                <td>Genre 5</td>
+                <td>Available</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>
+        <center>Register</center>
+    </h1>
+    <form id="register" action="#" method="post">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required>
+
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="5" max="100" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+
+        <input type="submit" value="Register">
+    </form>
+
+    <!-- Add more sections and content as needed -->
+
+    <script>
+        // Smooth scrolling offset for sticky navigation bar
+        var scrollOffset = document.querySelector('.navbar').offsetHeight;
+
+        // Adjust scroll offset on resize
+        window.addEventListener('resize', function () {
+            scrollOffset = document.querySelector('.navbar').offsetHeight;
+        });
+
+        // Smooth scrolling with offset
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            var sectionTop = section.getBoundingClientRect().top + window.pageYOffset - scrollOffset;
+            window.scrollTo({ top: sectionTop, behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>
